@@ -1,27 +1,27 @@
 extern {
-    #[link_name = "__GPIOA__"] static GPIOA: ::gpio::Gpio;
-    #[link_name = "__GPIOB__"] static GPIOB: ::gpio::Gpio;
-    #[link_name = "__GPIOC__"] static GPIOC: ::gpio::Gpio;
-    #[link_name = "__RCC__"] static RCC: ::rcc::Rcc;
-    #[link_name = "__TIM7__"] static TIM7: ::tim::Tim;
+    static __GPIOA__: ::gpio::Gpio;
+    static __GPIOB__: ::gpio::Gpio;
+    static __GPIOC__: ::gpio::Gpio;
+    static __RCC__: ::rcc::Rcc;
+    static __TIM7__: ::tim::Tim;
 }
 
 pub fn gpioa() -> &'static ::gpio::Gpio {
-    &GPIOA
+    &__GPIOA__
 }
 
 pub fn gpiob() -> &'static ::gpio::Gpio {
-    &GPIOB
+    &__GPIOB__
 }
 
 pub fn gpioc() -> &'static ::gpio::Gpio {
-    &GPIOC
+    &__GPIOC__
 }
 
 pub fn rcc() -> &'static ::rcc::Rcc {
-    &RCC
+    &__RCC__
 }
 
 pub fn tim7() -> &'static ::tim::Tim {
-    &TIM7
+    &__TIM7__
 }
