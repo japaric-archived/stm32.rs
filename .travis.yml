@@ -1,0 +1,21 @@
+language: rust
+sudo: false
+
+env:
+  global:
+    - secure: Ui+45BRsFMJl7QaUOBQ5GGSlquporxsuWn2jEg7268DLYe/vaZ4G3hpeHc9Ubw92NSDi56sCfw8JnpKOtzaYLej2vczejEor6+jfLhFtstKGRwaSJ861e5cNIjFFQrRrBWmNWTiIf1EZ4xF3bbLn8a+DzuhzuJef18oXEYV+hzM=
+script:
+  - cargo build --target thumbv7m-none-eabi --verbose
+  # Not yet supported
+  #- cargo doc --target thumbv7m-none-eabi --verbose
+  - ./check-line-length.sh
+
+after_success:
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bash upload-docs.sh'
+
+branches:
+  only: master
+
+notifications:
+  email:
+    on_success: never
