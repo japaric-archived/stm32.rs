@@ -1,0 +1,17 @@
+[package]
+
+authors = ["Jorge Aparicio <japaricious@gmail.com>"]
+name = "stm32"
+version = "0.0.0"
+
+[dependencies.core]
+git = "https://github.com/japaric/core.rs"
+
+[dependencies.cortex]
+git = "https://github.com/japaric/cortex.rs"
+
+[dependencies.reg]
+git = "https://github.com/japaric/reg.rs"
+
+[dependencies.volatile]
+git = "https://github.com/japaric/volatile.rs"
