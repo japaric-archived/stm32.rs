@@ -22,11 +22,13 @@ extern crate volatile;
 #[macro_use]
 extern crate reg;
 
+pub mod afio;
 pub mod gpio;
 pub mod interrupt;
 pub mod peripheral;
 pub mod rcc;
 pub mod tim;
+pub mod usart;
 
 fn reset_peripherals() {
     let rcc = peripheral::rcc();

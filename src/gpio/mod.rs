@@ -1,4 +1,4 @@
-//! General purpose and alternate function IO
+//! General purpose I/O
 
 pub mod crh;
 pub mod crl;
