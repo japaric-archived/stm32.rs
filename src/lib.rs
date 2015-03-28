@@ -23,6 +23,7 @@ extern crate volatile;
 extern crate reg;
 
 pub mod afio;
+pub mod dma;
 pub mod gpio;
 pub mod interrupt;
 pub mod peripheral;

@@ -1,5 +1,7 @@
 extern {
     static __AFIO__: ::afio::Afio;
+    static __DMA1__: ::dma::Dma;
+    static __DMA2__: ::dma::Dma;
     static __GPIOA__: ::gpio::Gpio;
     static __GPIOB__: ::gpio::Gpio;
     static __GPIOC__: ::gpio::Gpio;
@@ -10,6 +12,14 @@ extern {
 
 pub fn afio() -> &'static ::afio::Afio {
     &__AFIO__
+}
+
+pub fn dma1() -> &'static ::dma::Dma {
+    &__DMA1__
+}
+
+pub fn dma2() -> &'static ::dma::Dma {
+    &__DMA2__
 }
 
 pub fn gpioa() -> &'static ::gpio::Gpio {
