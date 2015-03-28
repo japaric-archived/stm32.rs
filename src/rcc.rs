@@ -15,7 +15,7 @@ pub struct Rcc {
     /// APB1 peripheral reset register
     /* 0x10 */ pub apb1rstr: RW<apb1rstr::Register>,
     /// AHB peripheral clock enable register
-    /* 0x14 */ ahbenr: RW<u32>,
+    /* 0x14 */ pub ahbenr: RW<ahbenr::Register>,
     /// APB2 peripheral clock enable register
     /* 0x18 */ pub apb2enr: RW<apb2enr::Register>,
     /// APB1 peripheral clock enable register
@@ -70,6 +70,15 @@ reg!(apb1rstr: u32 {
     PWRRST: 28,
     DACRST: 29,
     CECRST: 30,
+});
+
+reg!(ahbenr: u32 {
+    DMA1EN: 0,
+    DMA2EN: 1,
+    SRAMEN: 2,
+    FLITFEN: 4,
+    CRCEN: 6,
+    FSMCEN: 8,
 });
 
 reg!(apb2enr: u32 {
