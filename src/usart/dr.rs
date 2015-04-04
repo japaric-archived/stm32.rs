@@ -1,6 +1,6 @@
 use volatile::Into;
 
-#[derive(Copy)]
+#[derive(Clone, Copy)]
 #[repr(C)]
 pub struct Register(u32);
 

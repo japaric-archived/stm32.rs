@@ -12,7 +12,7 @@ pub mod prelude {
 const BITS: u8 = 4;
 const MASK: u32 = 0b1111;
 
-#[derive(Copy)]
+#[derive(Clone, Copy)]
 #[repr(C)]
 pub struct Register(u32);
 
